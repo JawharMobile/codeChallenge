@@ -10,6 +10,9 @@ This challenge defines a simple cloud scenario using Spring Cloud and Docker. Th
 - flight-data: Microservice that exposes an endpoint to obtain the flight data present on mongo.
 - flight-info: Microservice that exposes two endpoints to get the shortest and quickest route/s between two airports. All the business logic is here.
 
+![alt text](https://image.ibb.co/fD7i1T/cloud.png "Flight Graph")
+
+
 #### Technology
 Newest technologies and features have been used when developing this challenge. Thus, Spring Boot version 2 is used, same as Spring Cloud. Also, _flight-data_ and _flight-info_ expose its endpoints using non-blocking WebFlux.
 
