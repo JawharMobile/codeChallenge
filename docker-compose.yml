@@ -1,0 +1,77 @@
+version: "3"
+services:
+
+  mongoflights:
+    container_name: mongodbflights
+    build:
+      context: ./mongoData
+    image: adidas/mongodb:1.0.0
+    ports:
+      - 27017:27017
+
+  # Config-server container
+  config-server:
+    container_name: config-server
+    image: adidas/config-server:1.0.0
+    expose:
+      - "9000"
+  
+  # Eureka-server container
+  eureka-server:
+    container_name: eureka-server
+    image: adidas/eureka-server:1.0.0
+    environment:
+      SPRING_CONFIG_URI: "http://config-server:9000"
+      JAVA_OPTS: "-Dspring.profiles.active=docker"
+    expose:
+      - "8761"
+    
+  # security-server container
+  security-server:
+    container_name: security-server
+    image: adidas/security-server:1.0.0
+    environment:
+      SPRING_CONFIG_URI: "http://config-server:9000"
+      JAVA_OPTS: "-Dspring.profiles.active=docker"
+    expose:
+      - "8000"
+  
+  # Zuul-server container. This container is the only one exposed to the outside
+  zuul-server:
+    container_name: zuul-server
+    image: adidas/zuul-server:1.0.0
+    environment:
+      SPRING_CONFIG_URI: "http://config-server:9000"
+      JAVA_OPTS: "-Dspring.profiles.active=docker"
+    ports:
+      - "8000:8000"
+    
+  # Flights-data container.
+  flights-data:
+    container_name: flight-data
+    image: adidas/flight-data:1.0.0
+    environment:
+      SPRING_CONFIG_URI: "http://config-server:9000"
+      JAVA_OPTS: "-Dspring.profiles.active=docker"
+    expose:
+      - "8080"
+    
+  # Flights-info container.
+  flights-info:
+    container_name: flight-info
+    image: adidas/flight-info:1.0.0
+    environment:
+      SPRING_CONFIG_URI: "http://config-server:9000"
+      JAVA_OPTS: "-Dspring.profiles.active=docker"
+    expose:
+      - "8080"
+    
+  # Flights-info container.
+  flights-info_i2:
+    container_name: flight-info_i2
+    image: adidas/flight-info:1.0.0
+    environment:
+      SPRING_CONFIG_URI: "http://config-server:9000"
+      JAVA_OPTS: "-Dspring.profiles.active=docker"
+    expose:
+      - "8080"

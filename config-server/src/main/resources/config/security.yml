@@ -1,0 +1,16 @@
+server:
+  port: 8000
+
+security:
+  maxLength: 360000
+  secretKey: LarryBird
+  tokenPrefix: Bearer 
+  header: Authorization
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka

@@ -1,0 +1,36 @@
+server:
+  port: 8001
+
+zuul:
+  routes:
+    flightsInfo:
+      path: /flightsInfo/**
+      serviceId: flightsInfo
+    security:
+      path: /auth/**
+      serviceId: security
+      sensitiveHeaders: Cookie,Set-Cookie
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+spring:
+  cloud:
+    config:
+      allowOverride: true
+
+security:
+  endpoint: http://security/token
+  secretKey: LarryBird
+  tokenPrefix: Bearer 
+  header: Authorization
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka

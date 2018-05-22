@@ -1,0 +1,11 @@
+{"_id":{"$oid":"5b02eb23c8f996535a85686a"},"departure":"Zaragoza","destination":"London","departureTime":"12:00","arrivalTime":"13:40"}
+{"_id":{"$oid":"5b02ef76c8f996535a85686b"},"departure":"Zaragoza","destination":"Frankfurt","departureTime":"12:15","arrivalTime":"13:15"}
+{"_id":{"$oid":"5b02ef92c8f996535a85686c"},"departure":"London","destination":"Zaragoza","departureTime":"17:40","arrivalTime":"19:20"}
+{"_id":{"$oid":"5b02efb1c8f996535a85686d"},"departure":"London","destination":"Frankfurt","departureTime":"12:00","arrivalTime":"12:45"}
+{"_id":{"$oid":"5b02efd3c8f996535a85686e"},"departure":"London","destination":"Glasgow","departureTime":"15:15","arrivalTime":"15:45"}
+{"_id":{"$oid":"5b02efe9c8f996535a85686f"},"departure":"London","destination":"Copenhaguen","departureTime":"14:54","arrivalTime":"15:34"}
+{"_id":{"$oid":"5b02f025c8f996535a856870"},"departure":"Glasgow","destination":"London","departureTime":"7:45","arrivalTime":"8:35"}
+{"_id":{"$oid":"5b02f066c8f996535a856871"},"departure":"Frankfurt","destination":"Glasgow","departureTime":"14:03","arrivalTime":"15:03"}
+{"_id":{"$oid":"5b02f14bc8f996535a856872"},"departure":"Frankfurt","destination":"London","departureTime":"23:45","arrivalTime":"0:45"}
+{"_id":{"$oid":"5b02f163c8f996535a856873"},"departure":"Frankfurt","destination":"Copenhaguen","departureTime":"19:15","arrivalTime":"19:45"}
+{"_id":{"$oid":"5b02f1c9c8f996535a856874"},"departure":"Glasgow","destination":"Faroe","departureTime":"15:23","arrivalTime":"17:45"}

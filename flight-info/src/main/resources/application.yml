@@ -1,0 +1,11 @@
+server:
+  port: 8081
+  
+logging:
+  level:
+    com:
+      adidas: DEBUG
+
+spring:
+  profiles:
+    active: ${SPRING_PROFILE:dev}

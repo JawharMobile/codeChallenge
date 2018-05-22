@@ -1,0 +1,12 @@
+logging:
+  level:
+    com:
+      adidas: DEBUG
+      springframework:
+        security: DEBUG
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: zuulServer

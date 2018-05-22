@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    com:
+      adidas: DEBUG
+
+spring:
+  profiles:
+    active: ${SPRING_PROFILE:dev}
+  application:
+    name: flightData
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
